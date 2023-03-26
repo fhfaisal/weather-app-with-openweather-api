@@ -50,9 +50,9 @@ class _HomeState extends State<Home> {
   getWeatherData() async {
     try {
       var weather = await http.get(Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?lat=${position?.latitude}&lon=${position?.longitude}&appid=dd293968f6bc0aa3bc16e50cf9069458"));
+          "https://api.openweathermap.org/data/2.5/weather?lat=${position?.latitude}&lon=${position?.longitude}&appid=place your token here"));
       var forecast = await http.get(Uri.parse(
-          "https://api.openweathermap.org/data/2.5/forecast?lat=${position?.latitude}&lon=${position?.longitude}&appid=dd293968f6bc0aa3bc16e50cf9069458"));
+          "https://api.openweathermap.org/data/2.5/forecast?lat=${position?.latitude}&lon=${position?.longitude}&appid=place your token here"));
       setState(() {
         weatherMap = Map<String, dynamic>.from(jsonDecode(weather.body));
         forecastMap = Map<String, dynamic>.from(jsonDecode(forecast.body));
